@@ -1,5 +1,7 @@
 package Fourte;
 
+import java.util.Scanner;
+
 public class ArrayProblem {
     public void solution(int[] array,int k){
         for(int i=0;i<array.length;i++){
@@ -11,9 +13,17 @@ public class ArrayProblem {
         }
     }
     public static void main(String[] args) {
-        int[] array={1,2,3,4,5,6};
+        Scanner in = new Scanner(System.in);
+        System.out.println("Enter your array length :");
+        int length = in.nextInt();
+        int[] array = new int[length];
+        System.out.println("enter your array elements :");
+        for(int i=0;i<length;i++){
+            array[i]=in.nextInt();
+        }
+        System.out.println("Enter k value :");
+        int k=in.nextInt();
         ArrayProblem arrayProblem = new ArrayProblem();
-        int k=6;
         arrayProblem.solution(array,k);
     }
 }
